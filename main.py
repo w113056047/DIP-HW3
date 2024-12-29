@@ -8,9 +8,8 @@ image = cv2.imread("input.jpeg", cv2.IMREAD_GRAYSCALE)
 cv2.imshow("image", image)
 # cv2.waitKey(0)
 
-noise_proportion = 0.1
 mean = 0
-variance = 100
+variance = 10
 
 noise = np.random.normal(mean, np.sqrt(variance), image.shape)
 noisy_image = cv2.add(image.astype(np.int16), noise.astype(np.int16))
